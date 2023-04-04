@@ -14,7 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import path
+from django.views.generic import RedirectView
 
 from SkyFinderWebApp.views import home, track, contact
 
@@ -24,4 +26,9 @@ urlpatterns = [
     path('', home, name='home_page'),
     path('track/', track, name='track_page'),
     path('contact/', contact, name='contact_page'),
+    path(
+        "favicon.ico",
+        RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")),
+    ),
+
 ]
