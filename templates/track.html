@@ -5,37 +5,41 @@
     <title>Flight Tracking</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="icon"href="{% static 'favicon.ico' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
 </head>
 <body>
-    {% include "navbar.html" %}
-        <main>
-            {% block content %}
-              <h1>Track Flight</h1>
-            {% endblock %}
-        </main>
-         <div class="form__group">
-        <p><label for="Airline">Airline</label></p>
-         <textarea id="Airline" name="Airline" rows="1" cols="30"></textarea>
-         <br>
+{% include "navbar.html" %}
+<div class="layout-container">
+    <main class="content-container">
+        {% block content %}
+            <h1>Track Flight</h1>
+        {% endblock %}
         <div class="form__group">
-       <p><label for="Flightnumber">Flight Number</label></p>
-        <input type="number" id="Flightnumber" name="Flightnumber" min="1000000000" max="100000000">
+            <p><label for="Airline">Airline</label></p>
+            <textarea id="Airline" name="Airline" rows="1" cols="30"></textarea>
             <br>
-        <input type="submit" value="Submit">
+            <div class="form__group">
+                <p><label for="Flightnumber">Flight Number</label></p>
+                <input type="number" id="Flightnumber" name="Flightnumber" min="1000000000" max="100000000">
+                <br>
+                <input type="submit" value="Submit">
+            </div>
         </div>
-         </div>
-        <style>
-.form__group
-{
-margin: 0 auto;
-margin-left: auto;
-margin-right: auto;
-text-align:center;
-}
-h1 {text-align: center;}
+    </main>
+</div>
+<style>
+    .form__group {
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
 </style>
-<div class ="form__group">
+<div class="form__group">
 </div>
 
 

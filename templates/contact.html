@@ -5,14 +5,16 @@
     <title>Contact Us</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="icon"href="{% static 'favicon.ico' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
 </head>
 <body>
-    {% include "navbar.html" %}
-        <main>
-            {% block content %}
-                <p>test contact</p>
-            {% endblock %}
-        </main>
+{% include "navbar.html" %}
+<div class="layout-container">
+    <main class="content-container">
+        {% block content %}
+            <p>test contact</p>
+        {% endblock %}
+    </main>
+</div>
 </body>
 </html>
