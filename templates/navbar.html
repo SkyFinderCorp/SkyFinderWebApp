@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-items">
+            <a href="/" class="link">Home</a>
+            <a href="/track" class='link'>Track Flight</a>
+            <a href="/contact" class='link'>Contact</a>
+        </div>
+    </div>
+</body>
+<style>
+    .nav {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        position: relative;
+        width: 100%;
+        height: 2em;
+        background-color: #000000;
+    }
+    .nav-items {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .link {
+        text-decoration: none;
+        padding-left: 2em;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-family: 'Arial'
+
+    }
+    .link:hover {
+        color: #676767;
+    }
+</style>
+</html>

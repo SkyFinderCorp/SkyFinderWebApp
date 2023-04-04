@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>home</title>
 </head>
 <body>
-    <h1>test</h1>
+    {% include "navbar.html" %}
+        <main>
+            {% block content %}
+                <p>testhome</p>
+            {% endblock %}
+        </main>
 </body>
 </html>
