@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from SkyFinderWebApp.views import home
+from SkyFinderWebApp.views import home, track, contact
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home_page'),
+    path('track/', track, name='track_page'),
+    path('contact/', contact, name='contact_page'),
 ]
