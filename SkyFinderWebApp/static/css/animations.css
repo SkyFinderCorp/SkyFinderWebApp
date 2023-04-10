@@ -1,0 +1,43 @@
+.wrapper.eight {
+    font-size: 6rem;
+    background-color: #000000;
+    overflow: hidden;
+    color: transparent;
+}
+.eight .smoke {
+    margin: 3rem auto;
+    display: inline-flex;
+}
+.eight span {
+    display: inline-flex;
+    text-shadow: 0 0 0 #f5f5f5;
+    font-family: 'Play', sans-serif;
+    animation: smoke 5s ease infinite;
+}
+
+@keyframes smoke {
+    60% {
+        text-shadow: 0 0 40px #f5f5f5;
+    }
+    to {
+        transform: translate3d(12rem, -10rem, 0) skewX(50deg);
+        text-shadow: 0 0 20px #f5f5f5;
+        opacity: 0;
+    }
+}
+
+.eight span:nth-of-type(1) {
+    animation-delay: 3.1s;
+}
+.eight span:nth-of-type(2) {
+    animation-delay: 3.2s;
+}
+.eight span:nth-of-type(3) {
+    animation-delay: 3.3s;
+}
+.eight span:nth-of-type(4) {
+    animation-delay: 3.4s;
+}
+.eight span:nth-of-type(5) {
+    animation-delay: 3.5s;
+}

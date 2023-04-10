@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>SkyFinder</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animations.css' %}">
     <link rel="icon"href="{% static 'favicon.ico' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'animation.css' %}">
 </head>
 <body>
     {% include "navbar.html" %}
@@ -14,6 +14,16 @@
             <main class="content-container">
                 {% block content %}
                     <p>test home</p>
+
+                    <div class="wrapper eight">
+                        <h3 class="smoke">
+                            <span>S</span>
+                            <span>M</span>
+                            <span>O</span>
+                            <span>K</span>
+                            <span>E</span>
+                        </h3>
+                    </div>
                 {% endblock %}
             </main>
         </div>
