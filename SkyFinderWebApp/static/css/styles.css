@@ -39,5 +39,9 @@ html {
 p {
  text-align: center;
 line-height: 25px;
-
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

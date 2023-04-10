@@ -12,7 +12,7 @@
     display: inline-flex;
     text-shadow: 0 0 0 #0c0c0c;
     font-family: 'Play', sans-serif;
-    animation: smoke 5s ease infinite;
+    animation: smoke 9s ease infinite;
 }
 
 @keyframes smoke {
@@ -40,4 +40,17 @@
 }
 .eight span:nth-of-type(5) {
     animation-delay: 3.5s;
+}
+.eight span:nth-of-type(6) {
+    animation-delay: 3.6s;
+}
+.eight span:nth-of-type(7) {
+    animation-delay: 3.7s;
+}
+.eight span:nth-of-type(8) {
+    animation-delay: 3.8s;
+}
+.eight span:nth-of-type(9) {
+    animation-delay: 3.9s;
+
 }
