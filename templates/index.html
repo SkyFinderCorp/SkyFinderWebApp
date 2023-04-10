@@ -6,6 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="icon"href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'animation.css' %}">
 </head>
 <body>
     {% include "navbar.html" %}
@@ -16,5 +17,11 @@
                 {% endblock %}
             </main>
         </div>
+        <div class="text-container">
+  <p>This is some text.</p>
+</div>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+</head>
 </body>
 </html>
