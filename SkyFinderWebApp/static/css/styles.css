@@ -36,3 +36,8 @@ html {
   flex-grow: 1;
   justify-self: center;
 }
+p {
+ text-align: center;
+line-height: 25px;
+
+}

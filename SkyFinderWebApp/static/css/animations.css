@@ -1,6 +1,6 @@
 .wrapper.eight {
     font-size: 6rem;
-    background-color: #000000;
+    background-color: #585656;
     overflow: hidden;
     color: transparent;
 }
@@ -10,18 +10,18 @@
 }
 .eight span {
     display: inline-flex;
-    text-shadow: 0 0 0 #f5f5f5;
+    text-shadow: 0 0 0 #0c0c0c;
     font-family: 'Play', sans-serif;
     animation: smoke 5s ease infinite;
 }
 
 @keyframes smoke {
     60% {
-        text-shadow: 0 0 40px #f5f5f5;
+        text-shadow: 0 0 40px #0a0a0a;
     }
     to {
         transform: translate3d(12rem, -10rem, 0) skewX(50deg);
-        text-shadow: 0 0 20px #f5f5f5;
+        text-shadow: 0 0 20px #131313;
         opacity: 0;
     }
 }
