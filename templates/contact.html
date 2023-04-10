@@ -5,6 +5,7 @@
     <title>Contact Us</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="html" href="{% static 'components/textBox.html' %}">
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
 </head>
 <body>
@@ -13,7 +14,7 @@
     <main class="content-container">
         {% block content %}
             <p>test contact</p>
-            <textBox></textBox>
+            <textBox title="The Goal" body="We set out to build a robot that would allow for students online to have a physical presence within the classroom. It was roughly inspired by the robot made by Sheldon in The Big Bang Theory."></textBox>
         {% endblock %}
     </main>
 </div>
