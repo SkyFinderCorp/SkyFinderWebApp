@@ -16,14 +16,36 @@
         {% endblock %}
         <div class="form__group">
             <p><label for="Airline">Airline</label></p>
-            <textarea id="Airline" name="Airline" rows="1" cols="30"></textarea>
             <br>
-            <div class="form__group">
-                <p><label for="Flightnumber">Flight Number</label></p>
-                <input type="number" id="Flightnumber" name="Flightnumber" min="1000000000" max="100000000">
-                <br>
+            <form method="POST">
+                {% csrf_token %}
+                <label>Airline: <input type="text" name="airline"></label><br>
+                <label>Flight Number: <input type="text" name="flightnumber"></label><br>
                 <input type="submit" value="Submit">
+            </form>
+
+            <div class="flight_info">
+                <h1>{{ flightData.0 }}</h1>
+                <h2>{{ flightData.1 }}</h2>
+                <h3>{{ flightData.2 }}</h3>
+                <div class="flight_departure">
+                    <h1>Departure Info</h1>
+                    <p>{{ flightData.3 }}</p>
+                    <p>{{ flightData.4 }}</p>
+                    <p>{{ flightData.5 }}</p>
+                    <p>{{ flightData.6 }}</p>
+                    <p>{{ flightData.7 }}</p>
+                </div>
+                <div class="flight_arrival">
+                    <h1>Arrival Info</h1>
+                    <p>{{ flightData.8 }}</p>
+                    <p>{{ flightData.9 }}</p>
+                    <p>{{ flightData.10 }}</p>
+                    <p>{{ flightData.11 }}</p>
+                    <p>{{ flightData.12 }}</p>
+                </div>
             </div>
+            <h1>{{ Number }}</h1>
         </div>
     </main>
 </div>
