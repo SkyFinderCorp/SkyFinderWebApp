@@ -6,34 +6,29 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animations.css' %}">
-    <link rel="icon"href="{% static 'image/favicon.ico' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/textBox.css' %}">
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
 </head>
 <body>
-    {% include "navbar.html" %}
-        <div class="layout-container">
-            <main class="content-container">
-                {% block content %}
-                    <div class="wrapper eight">
-                        <h3 class="smoke">
-                            <span>S</span>
-                            <span>K</span>
-                            <span>Y</span>
-                            <span>F</span>
-                            <span>I</span>
-                             <span>N</span>
-                             <span>D</span>
-                             <span>E</span>
-                            <span>R</span>
-                        </h3>
+{% include "navbar.html" %}
+<div class="layout-container">
+    <main class="content-container">
+        {% block content %}
+            <div class="container">
+                <div class="outer-container">
+                    <div class="text-container">
+                        <div class="fade-in-text">
+                            <h1>Sky Finder</h1>
+                            <p>Wherever You Go SkyFinder Has You Covered</p>
+                        </div>
+                        <div class="fade-in-image">
+                            <img src="{% static 'image/SkyFinderLogo.png' %}" alt="1" height=270px>
+                        </div>
                     </div>
-                    <img src="{% static 'image/SkyFinderLogo.png' %}" alt="1" height = 270px>
-                {% endblock %}
-                <p>Wherever you go SkyFinder has you covered</p>
-
-            </main>
-        </div>
-        <div class="text-container">
+                </div>
+            </div>
+        {% endblock %}
+    </main>
 </div>
 </body>
 </html>
