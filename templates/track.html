@@ -5,6 +5,7 @@
     <title>Flight Tracking</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
 </head>
 <body>
@@ -12,15 +13,19 @@
 <div class="layout-container">
     <main class="content-container">
         {% block content %}
-            <h1>Track Flight</h1>
+            <div class="container">
+            <div class="outer-container">
+            <div class="form-container">
+
+
+            <h1 class="title">Track Flight</h1>
         {% endblock %}
-        <div class="form__group">
             <p><label for="Airline">Airline</label></p>
             <br>
             <form method="POST">
                 {% csrf_token %}
-                <label>Airline: <input type="text" name="airline"></label><br>
-                <label>Flight Number: <input type="text" name="flightnumber"></label><br>
+                <label><p>Airline:</p> <input class="textInput" type="text" name="airline"></label><br>
+                <label><p>Flight Number:</p> <input class="textInput" type="text" name="flightnumber"></label><br>
                 <input type="submit" value="Submit">
             </form>
 
@@ -43,27 +48,13 @@
                     <p>{{ flightData.10 }}</p>
                     <p>{{ flightData.11 }}</p>
                     <p>{{ flightData.12 }}</p>
-                </div>
             </div>
             <h1>{{ Number }}</h1>
         </div>
+        </div>
+        </div>
+        </div>
     </main>
 </div>
-<style>
-    .form__group {
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-    h1 {
-        text-align: center;
-    }
-</style>
-<div class="form__group">
-</div>
-
-
 </body>
 </html>
