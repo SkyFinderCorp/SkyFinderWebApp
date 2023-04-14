@@ -1,25 +1,27 @@
 .container {
-  padding: 2em;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-top: 60px;
 }
 .outer-container{
   width: 80%;
-  background-color: #559B81;
+  background-color: #87CEFF;
+  text-align: center;
 }
 .form-container {
-  background-color: #243742;
   margin-left: 1em;
   margin-right: 1em;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 2em;
+  background-color: #4b4b4b;
+  color: #000000;
+  padding: 1em;
 }
 .title {
   font-style: italic;
-  color: aliceblue;
+  color: #000000;
+  font-size: 60px;
   padding: 0.5em 1em 0.5em 1em;
 }
 .textInput {
@@ -36,21 +38,23 @@
   text-align: center;
 }
 input {
-  width: 10em;
+  width: 15em;
+  font-size: 20px;
   border-radius: 0.5em;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
-  background-color: #35495e;
-  border: solid #35495e;
+  background-color: #87CEFF;
+  border: solid #000000;
   outline: none;
-  color: aliceblue;
+  color: #484848;
 }
 button:hover {
   background-color: transparent;
-  color: aliceblue;
+  color: #343434;
 }
 p{
-  color: aliceblue;
+  font-size: 30px;
+  color: #000000;
   padding: 0.2em;
 }
