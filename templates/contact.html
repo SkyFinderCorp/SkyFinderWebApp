@@ -5,103 +5,111 @@
     <title>Contact Us</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="html" href="{% static 'components/textBox.html' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
 </head>
 <body>
 {% include "navbar.html" %}
 <div class="layout-container">
     <main class="content-container">
-        {% block content %}
-       <h1 style="text-align:center;">CONTACT US</h1>
-<p>For any issues comments or concerns please contact us or follow us on any of our social media platforms</p>
-<br>
+        <div class="container">
+            <div class="outer-container">
+                <div class="form-container">
+                    {% block content %}
+                        <h1 style="text-align:center;">CONTACT US</h1>
+                        <p>For any issues comments or concerns please contact us or follow us on any of our social media
+                            platforms</p>
+                        <br>
 
-            <div class="center-form">
-<form>
+                        <div class="center-form">
+                        <form>
 
-<label>Enter Your Name:<br></label>
+                            <label>Enter Your Name:<br></label>
 
-<input type="text" name="name" placeholder="Enter Your Name">
+                            <input type="text" name="name" placeholder="Enter Your Name">
 
-<br><br>
+                            <br><br>
 
-<label>Enter Your Email:<br> </label>
+                            <label>Enter Your Email:<br> </label>
 
-<input type="email" name="e-mail" placeholder="Name@Example.com">
+                            <input type="email" name="e-mail" placeholder="Name@Example.com">
 
-<br><br>
-    Comments:<br>
- <textarea rows ="5" cols = "40" name = "Description" spellcheck="false">
+                            <br><br>
+                            Comments:<br>
+                            <textarea rows="5" cols="40" name="Description" spellcheck="false"></textarea>
+                            <br>
+                            <br>
+                            <input type="submit">
+                        </form>
 
- </textarea>
-    <br>
-    <br>
-    <input type="submit">
-</form>
+                        <br>
+                        <br>
+                        <br>
 
-</div>
-<style>
- .layout-container {
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-</style>
-
-            <br>
-            <br>
-            <br>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <link rel="stylesheet"
+                              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-.fa-facebook {
-  background: #4069bd;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-instagram {
-  background: #f810e4;
-  color: #538df8;
-}
+                        <h2>Follow our Social medias below</h2>
 
 
-</style>
-</head>
-<body>
+                        <a href="https://www.facebook.com/profile.php?id=100091599618187" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/SkyFinderco" class="fa fa-twitter"></a>
+                        <a href="https://www.linkedin.com/in/skyfinder-co-562230272/" class="fa fa-linkedin"></a>
 
-<h2>Follow our Social medias below</h2>
+                        <a href="https://www.instagram.com/skyfinder_co/" class="fa fa-instagram"></a>
+
+                    {% endblock %}
+                    <
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .layout-container {
+                margin: 0 auto;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        </style>
 
 
-<a href="https://www.facebook.com/profile.php?id=100091599618187" class="fa fa-facebook"></a>
-<a href="https://twitter.com/SkyFinderco" class="fa fa-twitter"></a>
-<a href="https://www.linkedin.com/in/skyfinder-co-562230272/" class="fa fa-linkedin"></a>
+        <style>
+            .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 2px;
+            }
 
-<a href="https://www.instagram.com/skyfinder_co/" class="fa fa-instagram"></a>
 
-        {% endblock %}
+            .fa-facebook {
+                background: #4069bd;
+                color: white;
+            }
+
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+            }
+
+            .fa-linkedin {
+                background: #007bb5;
+                color: white;
+            }
+
+            .fa-instagram {
+                background: #f810e4;
+                color: #538df8;
+            }
+
+
+        </style>
+        </head>
     </main>
 </div>
 </body>

@@ -8,52 +8,66 @@
     <link rel="stylesheet" href="{% static 'css/form.css' %}">
     <link rel="icon" href="{% static 'image/favicon.ico' %}">
 </head>
-<body>
-{% include "navbar.html" %}
-<div class="layout-container">
-    <main class="content-container">
-        {% block content %}
-            <div class="container">
-            <div class="outer-container">
-            <div class="form-container">
 
-
-            <h1 class="title">Track Flight</h1>
-        {% endblock %}
-            <p><label for="Airline">Airline</label></p>
-            <br>
-            <form method="POST">
-                {% csrf_token %}
-                <label><p>Airline:</p> <input class="textInput" type="text" name="airline"></label><br>
-                <label><p>Flight Number:</p> <input class="textInput" type="text" name="flightnumber"></label><br>
-                <input type="submit" value="Submit">
-            </form>
-
-            <div class="flight_info">
-                <h1>{{ flightData.0 }}</h1>
-                <h2>{{ flightData.1 }}</h2>
-                <h3>{{ flightData.2 }}</h3>
-                <div class="flight_departure">
-                    <h1>Departure Info</h1>
-                    <p>{{ flightData.3 }}</p>
-                    <p>{{ flightData.4 }}</p>
-                    <p>{{ flightData.5 }}</p>
-                    <p>{{ flightData.6 }}</p>
-                    <p>{{ flightData.7 }}</p>
+    {% include "navbar.html" %}
+    <div class="layout-container">
+        <main class="content-container">
+            {% block content %}
+                <div class="container">
+                    <div class="outer-container">
+                        <div class="form-container">
+                            <h1 class="title">Track Flight</h1>
+                            <br>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <label><p>Airline:</p> <input class="textInput" type="text" name="airline"></label><br>
+                                <label><p>Flight Number:</p> <input class="textInput" type="text" name="flightnumber"></label><br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="flight_arrival">
-                    <h1>Arrival Info</h1>
-                    <p>{{ flightData.8 }}</p>
-                    <p>{{ flightData.9 }}</p>
-                    <p>{{ flightData.10 }}</p>
-                    <p>{{ flightData.11 }}</p>
-                    <p>{{ flightData.12 }}</p>
-            </div>
-            <h1>{{ Number }}</h1>
-        </div>
-        </div>
-        </div>
-        </div>
+                <div class="container">
+                    <div class="outer-container">
+                        <div class="form-container">
+                            <div class="flight_info">
+                                 <h1 class="title">Flight Info</h1>
+                                <p>Airline Name: {{ flightData.0 }}</p>
+                                <p>Flight Number: {{ flightData.1 }}</p>
+                                <p>Flight IATA: {{ flightData.2 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="outer-container">
+                        <div class="form-container">
+                            <div class="flight_departure">
+                                <h1 class="title">Departure Info</h1>
+                                <p>Departure Airport: {{ flightData.3 }}</p>
+                                <p>Departure IATA: {{ flightData.4 }}</p>
+                                <p>Departure Time: {{ flightData.5 }}</p>
+                                <p>Departure Gate: {{ flightData.6 }}</p>
+                                <p>Departure Terminal: {{ flightData.7 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="outer-container">
+                        <div class="form-container">
+                            <div class="flight_arrival">
+                                <h1 class="title">Arrival Info</h1>
+                                <p>Arrival Airport: {{ flightData.8 }}</p>
+                                <p>Arrival IATA: {{ flightData.9 }}</p>
+                                <p>Arrival Time: {{ flightData.10 }}</p>
+                                <p>Arrival Gate: {{ flightData.11 }}</p>
+                                <p>Arrival Terminal: {{ flightData.12 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
     </main>
 </div>
 </body>
